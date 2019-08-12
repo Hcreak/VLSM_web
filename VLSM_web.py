@@ -9,12 +9,11 @@ app.debug = True
 
 
 def mvimg():
-    os.chdir(os.path.split(os.path.realpath(__file__))[0])
     imguuid = str(uuid4())
     img_a = imguuid + '_a.jpg'
     img_b = imguuid + '_b.jpg'
-    copyfile('VLSM/a.jpg', 'static/' + img_a)
-    copyfile('VLSM/b.jpg', 'static/' + img_b)
+    copyfile('a.jpg', '../static/' + img_a)
+    copyfile('b.jpg', '../static/' + img_b)
     return (img_a, img_b)
 
 
